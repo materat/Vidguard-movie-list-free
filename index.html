@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Busca una Película & Series & Pronto Anime</title>
+  <link rel="stylesheet" href="/src/index.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Busca una Película || Series || Pronto Anime</h1>
+    </header>
+    <main>
+      <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Busca una Película || Series || Pronto Anime" required list="movie-suggestions">
+        <datalist id="movie-suggestions"></datalist>
+        <button type="submit">Buscar || Find</button>
+      </form>
+      <p class="brave-ad">Para evitar los molestos anuncios, ¡descárgate el Navegador de <a href="https://brave.com/download/" target="_blank">Brave</a>!</p>
+      <div id="status" class="status"></div>
+      <div id="carouselContainer" class="carousel">
+        <button class="carousel-nav prev" onclick="navigateCarousel(-1)">&#10094;</button>
+        <div id="carousel" class="carousel-inner"></div>
+        <button class="carousel-nav next" onclick="navigateCarousel(1)">&#10095;</button>
+      </div>
+      <div id="results" class="results"></div>
+      <div id="playerContainer" class="player-container" style="display: none;">
+        <iframe id="player" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2023 Movie Search App. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
